@@ -14,18 +14,20 @@ using std::pair;
 vector<int>adj[1000005];
 int vis[100005]={0};
 bool dfs(int node,int v){
+    if(node==v)
+    return true;
   vis[node]=1;
-  for(auto child: adj[node]){
+  for(auto child:adj[node]){
     if(!vis[child]){
-      if(child==v){
+       if(dfs(child,v)){
       return true;
     }
-      dfs(child,v);
     }
   }
   return false;
 }
 int reach(int x, int y) {
+   
   if(dfs(x,y))
   return 1;
   return 0;
@@ -38,10 +40,12 @@ int main() {
   for (size_t i = 0; i < m; i++) {
     int x, y;
     std::cin >> x >> y;
-    adj[x - 1].push_back(y - 1);
-    adj[y - 1].push_back(x - 1);
+    adj[x].push_back(y);
+    adj[y].push_back(x);
   }
   int x, y;
   std::cin >> x >> y;
-  std::cout << reach( x - 1, y - 1);
+  std::cout << reach( x , y );
+   vis[100005]={0};
+
 }
