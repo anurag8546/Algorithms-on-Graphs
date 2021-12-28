@@ -1,4 +1,4 @@
-# Algorithms-on-Graphs
+# Algorithms-on-Graphs COURSERA
 A part of Data Structures and Algorithms course [coursera]
 
 
