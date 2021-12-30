@@ -11,38 +11,6 @@ vector<bool>vis(100000+2,0);
 #define inf 1e18
 // int elements=0;
 int M=1e9+7;
-// void findTP(int n, stack<int> &st){
-//     vis[n]=1;
-//     for(auto it:adj[n]){
-//         if(!vis[it.first])
-//         findTP(it.first,st);
-//     }
-//     st.push(n);
-// }
-// void shortest_route(int src,int N, int des){
-//     stack<int>st;
-//     for(int i=1;i<=N;i++){
-//         if(!vis[i]){
-//             findTP(i,st);
-//         }
-//     }
-//     int dis[N+1];
-//     for(int i=0;i<=N;i++){
-//         dis[i]=inf;
-//     }
-//     dis[src]=0;
-//     while(!st.empty()){
-//         int  node=st.top();
-//         st.pop();
-//         if(dis[node]!=inf){
-//         for(auto it: adj[node]){
-//             if(dis[node]+it.second<dis[it.first])
-//             dis[it.first]=dis[node]+it.second;
-//         }
-//         }
-//     }
-//     (dis[des]==inf)?cout<<-1:cout<<dis[des];
-// }
 
 int32_t main(){
     int n,m;
